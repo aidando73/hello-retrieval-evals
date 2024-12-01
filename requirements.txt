@@ -1,3 +1,5 @@
 datasets
 FlagEmbedding
 llama-index
+chromadb
+tqdm
