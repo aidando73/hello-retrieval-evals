@@ -1,3 +1,4 @@
+# Example MSMARCO row
 query = "cost to get a patent"
 
 passages = {
