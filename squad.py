@@ -21,5 +21,3 @@ row2 = {
     "question": "Who did Beyonce donate the money to earned from her shows?",
     "answers": {"text": ["Clinton Bush Haiti Fund"], "answer_start": [367]},
 }
-
-row3 = 

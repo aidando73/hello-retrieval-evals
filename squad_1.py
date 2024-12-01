@@ -2,8 +2,12 @@
 # https://github.com/superlinked/VectorHub/blob/main/docs/articles/evaluation_of_RAG_retrieval_chunking_methods.md
 # Model: https://huggingface.co/BAAI/bge-m3
 # Dataset: squad
+# k = 10
 
-# Load in model
+# Let's try:
+# 1. Embed all contexts into chromadb
+# 2. Query the questions against chromadb
+# 3. Calculate the recall@k and precision@k by checking whether the chunk matches the document_id
 
 from FlagEmbedding import BGEM3FlagModel
 
