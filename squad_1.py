@@ -16,8 +16,8 @@ from FlagEmbedding import BGEM3FlagModel
 # model = BGEM3FlagModel("BAAI/bge-m3", use_fp16=True)
 
 # sentences_1 = ["What is BGE M3?", "Defination of BM25"]
-# sentences_2 = ["BGE M3 is an embedding model supporting dense retrieval, lexical matching and multi-vector interaction.", 
-#                "BM25 is a bag-of-words retrieval function that ranks a set of documents based on the query terms appearing in each document"]
+sentences_2 = ["BGE M3 is an embedding model supporting dense retrieval, lexical matching and multi-vector interaction.", 
+               "BM25 is a bag-of-words retrieval function that ranks a set of documents based on the query terms appearing in each document"]
 
 # embeddings_1 = model.encode(sentences_1, batch_size=12, max_length=8192)["dense_vecs"]
 # embeddings_2 = model.encode(sentences_2, batch_size=12, max_length=8192)["dense_vecs"]
@@ -30,6 +30,8 @@ from FlagEmbedding import BGEM3FlagModel
 from llama_index.core.node_parser.text import SentenceSplitter
 from llama_index.core import Document
 # from llama_index.core import VectorStoreIndex
+from llama_index.core.ingestion import IngestionPipeline
+from llama_index.core.embeddings import HuggingFaceEmbedding
 
 text_splitter = SentenceSplitter(chunk_size=128, chunk_overlap=0)
 
@@ -39,4 +41,18 @@ sentence3 = "In 2011, documents obtained by WikiLeaks revealed that Beyoncé was
 document = Document(text=sentence3)
 
 # pprint(chunks)
-pprint(document)
+# pprint(document)
+
+embedding_model = HuggingFaceEmbedding(model_name="BAAI/bge-m3")
+
+embeddings = embedding_model._get_text_embedding(sentences_2[0])
+
+pprint(embeddings)
+
+
+# pipeline = IngestionPipeline(
+#     transformations=[
+#         text_splitter,
+
+#     ]
+# )
