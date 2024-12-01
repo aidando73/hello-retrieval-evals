@@ -3,3 +3,5 @@ FlagEmbedding
 llama-index
 chromadb
 tqdm
+matplotlib
+collection
