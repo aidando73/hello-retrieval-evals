@@ -1,7 +1,7 @@
 datasets
 FlagEmbedding
 llama-index
-chromadb
+# chromadb
 tqdm
 matplotlib
 collection

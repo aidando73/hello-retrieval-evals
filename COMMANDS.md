@@ -1,15 +1,14 @@
 
 ```bash
-pip install -r requirements.txt
-
 source ~/miniconda3/bin/activate
 conda create --prefix ./env python=3.10
 
 conda activate ./env
-pip install -r requirements.txt
-# Ran into issues with pytorch faiss
-conda install -c pytorch faiss-cpu=1.9.0
 conda install -c conda-forge faiss-cpu
+pip install -r requirements.txt
+
+pip uninstall llama-index
+pip install llama-index --upgrade --no-cache-dir --force-reinstall
 ```
 
 
