@@ -6,3 +6,4 @@ tqdm
 matplotlib
 collection
 llama-index-embeddings-huggingface
+pandas==2.1.4
