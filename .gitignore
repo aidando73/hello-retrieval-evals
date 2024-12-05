@@ -1,2 +1,4 @@
 .venv/
 squad_embeddings.npy
+squad_vector_store/
+env/

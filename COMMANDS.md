@@ -1,12 +1,21 @@
 
 ```bash
 pip install -r requirements.txt
+
+source ~/miniconda3/bin/activate
+conda create --prefix ./env python=3.10
+
+conda activate ./env
+pip install -r requirements.txt
+conda install -c pytorch faiss-cpu=1.9.0
+
 ```
 
 
 Differences between squad_2.ipynb and chunker-research:
-- Contexts are de-duplicated
-- 
+- Docs are de-duplicated and given an id
+- A match => if the chunk originates from the same doc (not whether it contains the answer as substring)
+- Uses Exact search via Inner Product search instead of HNSW via L2 distance
 
 Other minor differences
 - Chunk overlap is 16
