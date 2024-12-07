@@ -22,3 +22,7 @@ Other minor differences
 - train and validation splits are combined
 
 Thank you :thanks: I was finding a way to evaluate retrieval results for llama-stack so I could improve retrievals - so thanks for making this open source.
+
+
+- MTEB has some cool links at the bottom related: 
+- LongEmbed which seems exactly targetted towards what I'm trying to do: https://github.com/dwzhu-pku/LongEmbed
