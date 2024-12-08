@@ -4,3 +4,5 @@ squad_vector_store/
 env/
 query_embeddings.npy
 retrieved_ids.npy
+output.html
+output.txt
